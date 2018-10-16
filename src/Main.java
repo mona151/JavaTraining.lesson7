@@ -4,40 +4,8 @@
  * Author: Kirill Kuzin
  * Lesson 1 Task 3
  * */
-import java.util.*;
+import transport.*;
 
-class Transport{
-    protected float speed;
-    protected float price;
-}
-
-class Auto extends Transport{
-    private String model;
-    private String manufacturer;
-
-    Auto (float speed, float price, String manufacturer , String model){
-        this.speed = speed;
-        this.manufacturer = manufacturer;
-        this.model = model;
-        this.price = price;
-        System.out.println("Speed: " + speed + ", model: " + model);
-    }
-}
-
-class Bus extends Transport{
-    private String model;
-    private String manufacturer;
-    private int amountOfSeats;
-
-    Bus(float speed, float price, String manufacturer ,String model , int amountOfSeats){
-        this.speed = speed;
-        this.price = price;
-        this.manufacturer = manufacturer;
-        this.model = model;
-        this.amountOfSeats = amountOfSeats;
-        System.out.println("Speed: " + speed + ", model: " + model + ", Seats: " + amountOfSeats);
-    }
-}
 
 public class Main {
     public static void main(String[] args) {
