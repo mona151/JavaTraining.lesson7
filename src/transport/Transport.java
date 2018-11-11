@@ -1,15 +1,16 @@
 package transport;
 
 public abstract class Transport{
-    private float speed;
+
+    private float fuelConsumption;
     private float price;
 
-    public float getSpeed() {
-        return speed;
+    public Transport(float fuelConsumption){
+        this.fuelConsumption = fuelConsumption;
     }
 
-    public void setSpeed(float speed) {
-        this.speed = speed;
+    public float getFuelConsumption() {
+        return fuelConsumption;
     }
 
     public float getPrice() {
@@ -19,5 +20,6 @@ public abstract class Transport{
     public void setPrice(float price) {
         this.price = price;
     }
-    public abstract void getName();
+
+    public abstract void getFullName();
 }

@@ -4,12 +4,22 @@
  * Author: Kirill Kuzin
  * Lesson 1 Task 3
  * */
+import park.Park;
 import transport.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
     public static void main(String[] args) {
-        Auto cabSolaris = new Auto(210f, 670000,"Hyundai", "Solaris");
-        Bus busMercedes=  new Bus(180f, 4800000,"Mecedes", "Travego 15 RH", 49);
+        Bus busMercedes = new Bus(180f, "Travego 15 RH", 4800000, "Mercedes");
+        Auto cabSolaris = new Auto(12f, "Solaris", 630000, "Huyndai");
+
+        List<Transport> transport = new ArrayList<Transport>();
+        transport.add(busMercedes);
+        transport.add(cabSolaris);
+        park.Park park = new Park(transport);
+        park.getParkInfo();
     }
 }

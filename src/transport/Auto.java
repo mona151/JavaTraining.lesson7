@@ -4,12 +4,15 @@ public class Auto extends Transport {
     private String model;
     private String manufacturer;
 
-    Auto (float speed, float price, String manufacturer , String model){
+    public Auto(float fuelConsumption, String model, float price, String manufacturer){
 
-        this.speed = speed;
+        super(fuelConsumption);
+
         this.manufacturer = manufacturer;
         this.model = model;
-        this.price = price;
-        System.out.println("Speed: " + speed + ", model: " + model);
+    }
+
+    public void getFullName(){
+        System.out.println(manufacturer + " " + model + ", fuel consumption: " + getFuelConsumption());
     }
 }
