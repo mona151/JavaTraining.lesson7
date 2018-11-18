@@ -3,7 +3,7 @@ package transport;
 public abstract class Transport{
 
     private float fuelConsumption;
-    private float price;
+    private int price;
 
     public Transport(float fuelConsumption){
         this.fuelConsumption = fuelConsumption;
@@ -17,7 +17,7 @@ public abstract class Transport{
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
