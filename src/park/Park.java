@@ -10,10 +10,10 @@ import java.util.List;
 public class Park {
     private List<Transport> transport = new ArrayList<Transport>();
     private List<Transport> sortedTransport = new ArrayList<>();
+    private float priceSum;
     public Park(List<Transport> transport){
         this.transport = transport;
     }
-    private float priceSum;
 
     public void getParkInfo(){
         System.out.println("Amount of cars in the park is " + transport.size());
@@ -31,9 +31,8 @@ public class Park {
 
     public void sortParkByFuelConsumption(){
         //Collections.copy(sortedTransport, transport);
-        for (int k = 0; k < transport.size(); k++) {
-            sortedTransport.add(transport.get(k));
-        }
+        sortedTransport.addAll(transport);
+
         for (int i = sortedTransport.size() - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                     if (sortedTransport.get(j).getFuelConsumption() > sortedTransport.get(j + 1).getFuelConsumption()){
