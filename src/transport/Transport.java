@@ -1,9 +1,16 @@
 package transport;
 
+import annotations.FieldValueIsNotZero;
+import annotations.RestrictedNumericValue;
+
 public abstract class Transport {
     private String model;
     private String manufacturer;
+
+    @RestrictedNumericValue
     private float fuelConsumption;
+
+    @FieldValueIsNotZero
     private int price;
 
     public Transport(String model, String manufacturer, float fuelConsumption) {

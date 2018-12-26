@@ -1,6 +1,9 @@
 package transport;
 
-public class Auto extends Transport {
+import annotations.CheckClassModifier;
+
+@CheckClassModifier
+public final class Auto extends Transport {
 
 
     public Auto(float fuelConsumption, String model, int price, String manufacturer){

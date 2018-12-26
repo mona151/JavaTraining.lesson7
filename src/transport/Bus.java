@@ -1,5 +1,8 @@
 package transport;
 
+import annotations.CheckClassModifier;
+
+@CheckClassModifier
 public class Bus extends Transport {
 
 
